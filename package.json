@@ -27,6 +27,7 @@
         "test": "jest --coverage"
     },
     "devDependencies": {
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.1.0",
@@ -37,16 +38,14 @@
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-2": "^6.24.1",
         "enzyme": "^3.11.0",
-        "enzyme-adapter-react-15": "^1.4.1",
-        "eslint": "^7.4.0",
+        "eslint": "^8.3.0",
         "eslint-plugin-babel": "^5.3.1",
-        "eslint-plugin-react": "^7.20.3",
-        "jest": "^26.1.0",
-        "nodemon": "^2.0.4",
-        "react": "^16.13.1",
-        "react-addons-test-utils": "^15.6.2",
-        "react-dom": "^16.13.1",
-        "react-test-renderer": "16"
+        "eslint-plugin-react": "^7.27.1",
+        "jest": "^27.4.3",
+        "nodemon": "^2.0.15",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-test-renderer": "17.0.2"
     },
     "peerDependencies": {
         "react": "^16.13.1",
