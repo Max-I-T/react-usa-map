@@ -95,6 +95,8 @@
 
       return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = USAMap.__proto__ || Object.getPrototypeOf(USAMap)).call.apply(_ref, [this].concat(args))), _this), _this.clickHandler = function (stateAbbreviation) {
         _this.props.onClick(stateAbbreviation);
+      }, _this.mouseOverHandler = function (stateAbbreviation) {
+        _this.props.onMouseOver(stateAbbreviation);
       }, _this.fillStateColor = function (state) {
         if (_this.props.customize && _this.props.customize[state] && _this.props.customize[state].fill) {
           return _this.props.customize[state].fill;
@@ -106,11 +108,23 @@
           return _this.props.customize[state].clickHandler;
         }
         return _this.clickHandler;
+      }, _this.stateMouseOverHandler = function (state) {
+        if (_this.props.customize && _this.props.customize[state] && _this.props.customize[state].mouseOverHandler) {
+          return _this.props.customize[state].mouseOverHandler;
+        }
+        return _this.mouseOverHandler;
       }, _this.buildPaths = function () {
         var paths = [];
         var dataStates = (0, _usaMapDimensions2.default)();
         for (var stateKey in dataStates) {
-          var path = _react2.default.createElement(_USAState2.default, { key: stateKey, stateName: dataStates[stateKey].name, dimensions: dataStates[stateKey]["dimensions"], state: stateKey, fill: _this.fillStateColor(stateKey), onClickState: _this.stateClickHandler(stateKey) });
+          var path = _react2.default.createElement(_USAState2.default, {
+            key: stateKey,
+            stateName: dataStates[stateKey].name,
+            dimensions: dataStates[stateKey]["dimensions"],
+            state: stateKey,
+            fill: _this.fillStateColor(stateKey),
+            onClickState: _this.stateClickHandler(stateKey),
+            onMouseOverState: _this.stateMouseOverHandler(stateKey) });
           paths.push(path);
         };
         return paths;

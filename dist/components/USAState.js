@@ -28,7 +28,13 @@
   var USAState = function USAState(props) {
     return _react2.default.createElement(
       "path",
-      { d: props.dimensions, fill: props.fill, "data-name": props.state, className: props.state + " state", onClick: props.onClickState },
+      {
+        d: props.dimensions,
+        fill: props.fill,
+        "data-name": props.state,
+        className: props.state + " state",
+        onClick: props.onClickState,
+        onMouseOver: props.onMouseOverState },
       _react2.default.createElement(
         "title",
         null,
