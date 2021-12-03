@@ -138,7 +138,7 @@
               _react2.default.createElement("path", { className: "DC1", fill: this.fillStateColor("DC"), d: "M801.8,253.8 l-1.1-1.6 -1-0.8 1.1-1.6 2.2,1.5z" }),
               _react2.default.createElement(
                 "circle",
-                { className: "DC2", onClick: this.clickHandler, "data-name": "DC", fill: this.fillStateColor("DC2"), stroke: "#FFFFFF", strokeWidth: "1.5", cx: "801.3", cy: "251.8", r: "5", opacity: "0" },
+                { className: "DC2", onClick: this.clickHandler, "data-name": "DC", fill: "rgba(255,255,255,0)", stroke: "#FFFFFF", strokeWidth: "1.5", cx: "801.3", cy: "251.8", r: "5", opacity: "1" },
                 _react2.default.createElement(
                   "title",
                   null,
